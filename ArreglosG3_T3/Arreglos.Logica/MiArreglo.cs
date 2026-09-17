@@ -9,77 +9,76 @@ namespace Arreglos.Logica
         //campos o atributos
         private int _tope;
         private int[] _arreglo;
-        //Constructor
-        public MiArreglo(int n) {
+        //constructor
+        public MiArreglo(int n)
+        {
             N = n;
-            _arreglo = new int[N];
+            _arreglo = new int[n];
             _tope = 0;
         }
         //propiedades
         public int N { get; }
-        public bool EstaLleno => _tope == N;
-        public bool EstaVacio => _tope == 0;
 
-        //Metodos
+        public bool EstaLeno => _tope == N;
+        public bool EstaVacio => _tope == 0;
+        //metodos
+        //metodo llenar
         public void Llenar(int minimo, int maximo)
         {
             Random random = new Random();
             for (int i = 0; i < N; i++)
             {
-                _arreglo[i] = random.Next(minimo, maximo);     
+                _arreglo[i] = random.Next(minimo, maximo);
+
             }
             _tope = N;
         }
-        //Metodo ordenar
+        //metodo ordenar
         public void Ordenar()
         {
             for (int i = 0; i < _tope - 1; i++)
             {
-                for (int j = i+; j < _tope; j++)
+                for (int j = i + 1; j < _tope; j++)
                 {
-                    if(_arreglo[i] > _arreglo[j])
+                    if (_arreglo[i] > _arreglo[j])
                     {
-                        Cambiar(ref _arreglo [i], ref _arreglo[j]);
+                        Cambiar(ref _arreglo[i], ref _arreglo[j]);
                     }
                 }
-            } 
+
+            }
         }
-        //Metodo cambiar
+        //metodo Caambiar
         public void Cambiar(ref int a, ref int b)
         {
-            int aux = a;
+            int auxiliar = a;
             a = b;
-            b = aux;
+            b = auxiliar;
         }
-        //Metodo ToString
-
+        //metodo ToString
         public override string ToString()
         {
             if (EstaVacio)
             {
                 Console.WriteLine("El arreglo esta vacio");
             }
-                int contador = 0;
-                string salida = string.Empty;
-            for(int i = 0; i < _tope; i++)
+            int contador = 0;
+            string salida = string.Empty;
+            for (int i = 0; i < _tope; i++)
             {
-                salida += $"{_arreglo[i]}\t";
+                salida += $"{_arreglo[i]}\t ";
                 contador++;
                 if (contador > 9)
                 {
-                    salida += "\n";
                     contador = 0;
+                    //salida = salida + "\n";
+                    salida += "\n";
                 }
 
-                contador = 0;
-                //salida = salida "\n";
-                salida += "\n";
-                {
-            
-            }   
+            }
             return salida;
         }
 
+
     }
-}
 }
