@@ -22,7 +22,11 @@ namespace Arreglos.Logica
         public bool EstaLeno => _tope == N;
         public bool EstaVacio => _tope == 0;
         //metodos
-        //metodo llenar
+        public void Llenar()
+        { 
+            Llenar(1, 100);
+        }
+        //metodo llenar con parametros
         public void Llenar(int minimo, int maximo)
         {
             Random random = new Random();
