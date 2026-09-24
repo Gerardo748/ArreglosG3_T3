@@ -3,7 +3,7 @@
   <Class Name="Arreglos.Logica.MiArreglo">
     <Position X="8.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIMAAAAAAAAAAAQEAAAAAAAAAgAAAEAAAAAAABAAAAQ=</HashCode>
+      <HashCode>AIMAAAAQAAAAAAQEAAAAAAAAAgAAAEAAAAAAABAAAAQ=</HashCode>
       <FileName>MiArreglo.cs</FileName>
     </TypeIdentifier>
   </Class>
